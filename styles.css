@@ -1,0 +1,134 @@
+@font-face {
+    font-family: Norse-Bold;
+    src: url(./fonts/Norse-Bold.otf);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    /* border: 1px solid; */
+}
+body{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    height: 100vh;
+}
+.left{
+    background-image: url('./imgs/bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 40%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    display: flex;
+    gap: 1vw;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding: 1vw;
+    color: aliceblue;
+}
+.title img{
+    width: 10vw;
+}
+.title h1{
+    font-family: Norse-Bold;
+    font-size: 10rem;
+}
+
+.right{
+    padding: 5vh 0vw;
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+    justify-content: space-between;
+    width: 60%;
+}
+.right >*:not(form){
+    padding-left: 2vw;
+}
+form{
+    /* display: flex; */
+}
+.form_cont{
+    width: 100%;
+    box-shadow: .2vw .4vw .8vw rgba(0, 0, 0, 0.363);
+    padding: 4vh 2vw;
+}
+.form_cont> div{
+    display: flex;
+    gap: 4vw;
+}
+fieldset{
+    border: none;
+}
+label, input{
+    display: block;
+    margin: 1.5vh 0vw .1vh;
+}
+label{
+    font-weight: bold;
+}
+input:not(input[type="submit"]){
+    height: 5vh;
+    width: 20vw;
+    padding-left: .5vw;
+    border-radius: .2vw;
+    border: 1px solid rgba(0, 0, 0, 0.336);
+}
+input[type="submit"]{
+    padding: 2vh 3vw;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: #0b1d21;
+    color: aliceblue;
+    border: none;
+    border-radius: .4vw;
+    margin-left: 2vw;
+    cursor: pointer;
+    border: .2vw solid transparent;
+}
+input[type="submit"]:hover,
+input[type="submit"]:focus{
+    background-color: aliceblue;
+    color: #0b1d21;
+    border-color: #0b1d21;
+    outline: none;
+}
+input[type="email"]:valid{
+    background-color: lightgreen;
+}
+input:invalid{
+     outline: .2vw solid red;
+}
+input:focus{
+    outline: .2vw solid blue;
+
+}
+fieldset > span{
+    color: red;
+    font-size: .7rem;
+    font-weight: bold;
+}
+.right > span{
+    font-style: italic;
+}
+a{
+    color: #0b1d21;
+    font-weight: bolder;
+}
+#copyRights{
+    position: absolute;
+    bottom: 1vh;
+    font-family: Norse-Bold;
+    font-size: 1.5rem;
+    text-align: center;
+}
